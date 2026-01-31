@@ -8,8 +8,6 @@ A Java-based network simulation system that models a resistance network with hos
 ## Quick Start
 
 ```bash
-# Clone and navigate to directory
-cd 2023400309
 
 # Option 1: Use the run script (recommended)
 ./run.sh testcases/inputs/example.txt output.txt
@@ -285,36 +283,43 @@ This project was developed with a focus on architectural characteristics and sof
 The project was designed with careful attention to connascence relationships to minimize coupling:
 
 **Connascence of Name (CoN)** - Acceptable and necessary:
+
 - Method calls between Controller → Service → Network layers
 - Data structure method invocations (HashTable, PriorityQueue)
 - Entity references (Host, Backdoor)
 
 **Connascence of Type (CoT)** - Managed through interfaces:
+
 - Generic type parameters in data structures (`HashTable<K,V>`, `DoublyLinkedList<T>`)
 - Return types in Service layer methods
 - Indexable interface for priority queue elements
 
 **Connascence of Meaning (CoM)** - Eliminated:
+
 - Used enums and constants instead of magic numbers
 - Explicit state flags (sealed/unsealed) instead of boolean meanings
 - Clear parameter names that convey semantic meaning
 
 **Connascence of Position (CoP)** - Minimized:
+
 - Used parameter objects (Route record) instead of long parameter lists
 - Grouped related parameters logically
 - Limited constructor parameters through builder-like patterns
 
 **Connascence of Algorithm (CoA)** - Centralized:
+
 - Hashing algorithm contained within HashTable class
 - Priority comparison logic encapsulated in PriorityQueue
 - Path comparison logic localized to Network class
 
 **Connascence of Execution (CoE)** - Documented:
+
 - Clear method ordering requirements documented in comments
 - Initialization sequences clearly defined
 - State transition requirements explicitly stated
 
 **Connascence of Timing (CoT)** - Avoided:
+
 - No concurrent execution dependencies
 - Deterministic single-threaded execution model
 
