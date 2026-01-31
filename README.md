@@ -1,5 +1,12 @@
 # MatrixNet - Network Simulation System
 
+![Java](https://img.shields.io/badge/Java-17+-orange?style=flat&logo=openjdk&logoColor=white)
+![Data Structures](https://img.shields.io/badge/Data_Structures-Hash_Table_|_Priority_Queue_|_Linked_List-blue?style=flat)
+![Algorithms](https://img.shields.io/badge/Algorithms-Dijkstra_|_BFS_|_Graph_Analysis-green?style=flat)
+![University](https://img.shields.io/badge/Boğaziçi_University-CMPE_250-red?style=flat)
+![Status](https://img.shields.io/badge/Status-Complete-success?style=flat)
+![License](https://img.shields.io/badge/License-Academic-lightgrey?style=flat)
+
 > **Bogazici University - CMPE 250 Data Structures and Algorithms**  
 > Programming Assignment 3
 
