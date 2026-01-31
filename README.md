@@ -29,7 +29,7 @@ MatrixNet simulates a network of interconnected hosts (access points) connected 
 ## Project Structure
 
 ```
-2023400309/
+MatrixNet/
 ├── src/                          # Source files
 │   ├── Main.java                 # Entry point
 │   ├── Controller.java           # Command dispatcher
