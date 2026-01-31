@@ -264,6 +264,62 @@ The routing algorithm uses a modified Dijkstra's algorithm that accounts for con
 - Java 17 or higher (uses records and pattern matching)
 - No external dependencies
 
+## Development Notes
+
+### Code Ownership & AI Usage
+
+All code and algorithms in this project are **authored by Ahmet Sait Denizli**. Throughout the development process, AI tools were used **exclusively for debugging and code commenting purposes**. The design decisions, algorithmic implementations, and architectural choices are entirely the work of the author.
+
+### Architectural Characteristics & Software Quality
+
+This project was developed with a focus on architectural characteristics and software engineering principles:
+
+- **Sustainability**: Code designed for maintainability and long-term evolution
+- **Modularity**: Clear separation of concerns with layered architecture
+- **Performance**: Optimized data structures and algorithms for efficiency
+- **Testability**: Well-structured code enabling comprehensive testing
+- **Readability**: Clear naming conventions and comprehensive documentation
+
+### Connascence Analysis
+
+The project was designed with careful attention to connascence relationships to minimize coupling:
+
+**Connascence of Name (CoN)** - Acceptable and necessary:
+- Method calls between Controller → Service → Network layers
+- Data structure method invocations (HashTable, PriorityQueue)
+- Entity references (Host, Backdoor)
+
+**Connascence of Type (CoT)** - Managed through interfaces:
+- Generic type parameters in data structures (`HashTable<K,V>`, `DoublyLinkedList<T>`)
+- Return types in Service layer methods
+- Indexable interface for priority queue elements
+
+**Connascence of Meaning (CoM)** - Eliminated:
+- Used enums and constants instead of magic numbers
+- Explicit state flags (sealed/unsealed) instead of boolean meanings
+- Clear parameter names that convey semantic meaning
+
+**Connascence of Position (CoP)** - Minimized:
+- Used parameter objects (Route record) instead of long parameter lists
+- Grouped related parameters logically
+- Limited constructor parameters through builder-like patterns
+
+**Connascence of Algorithm (CoA)** - Centralized:
+- Hashing algorithm contained within HashTable class
+- Priority comparison logic encapsulated in PriorityQueue
+- Path comparison logic localized to Network class
+
+**Connascence of Execution (CoE)** - Documented:
+- Clear method ordering requirements documented in comments
+- Initialization sequences clearly defined
+- State transition requirements explicitly stated
+
+**Connascence of Timing (CoT)** - Avoided:
+- No concurrent execution dependencies
+- Deterministic single-threaded execution model
+
+This connascence analysis guided refactoring decisions to maintain low coupling and high cohesion throughout the codebase.
+
 ## Course Information
 
 - **University**: Bogazici University
