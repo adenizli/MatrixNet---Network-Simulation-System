@@ -1,0 +1,19 @@
+spawn_host ALPHA 5
+spawn_host BETA 3
+spawn_host GAMMA 4
+spawn_host DELTA 5
+spawn_host ALPHA 3
+link_backdoor ALPHA BETA 10 100 2
+link_backdoor BETA GAMMA 15 50 3
+link_backdoor GAMMA DELTA 20 80 1
+link_backdoor ALPHA DELTA 50 200 4
+link_backdoor ALPHA ALPHA 10 50 1
+trace_route ALPHA DELTA 40 0
+trace_route ALPHA DELTA 40 5
+scan_connectivity
+oracle_report
+simulate_breach BETA
+simulate_breach ALPHA DELTA
+seal_backdoor ALPHA BETA
+trace_route ALPHA DELTA 40 0
+scan_connectivity

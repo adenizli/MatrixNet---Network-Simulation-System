@@ -1,0 +1,26 @@
+Spawned host ALPHA with clearance level 5.
+Spawned host BETA with clearance level 3.
+Spawned host GAMMA with clearance level 4.
+Spawned host DELTA with clearance level 5.
+Some error occurred in spawn_host.
+Linked ALPHA <-> BETA with latency 10ms, bandwidth 100Mbps, firewall 2.
+Linked BETA <-> GAMMA with latency 15ms, bandwidth 50Mbps, firewall 3.
+Linked GAMMA <-> DELTA with latency 20ms, bandwidth 80Mbps, firewall 1.
+Linked ALPHA <-> DELTA with latency 50ms, bandwidth 200Mbps, firewall 4.
+Some error occurred in link_backdoor.
+Optimal route ALPHA -> DELTA: ALPHA -> BETA -> GAMMA -> DELTA (Latency = 45ms)
+Optimal route ALPHA -> DELTA: ALPHA -> DELTA (Latency = 50ms)
+Network is fully connected.
+--- Resistance Network Report ---
+Total Hosts: 4
+Total Unsealed Backdoors: 4
+Network Connectivity: Connected
+Connected Components: 1
+Contains Cycles: Yes
+Average Bandwidth: 107.5Mbps
+Average Clearance Level: 4.3
+Host BETA is NOT an articulation point. Network remains the same.
+Backdoor ALPHA <-> DELTA is NOT a bridge. Network remains the same.
+Backdoor ALPHA <-> BETA sealed.
+Optimal route ALPHA -> DELTA: ALPHA -> DELTA (Latency = 50ms)
+Network is fully connected.
